@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sono', sans-serif;
+    font-size: 18px;
+}
+
+form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header {
+
+    background: lavenderblush;
+}
+
+.resetBtn {
+    margin-bottom: 20px;
+}
+
+.homework {
+    border: 1px solid lightgray;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
