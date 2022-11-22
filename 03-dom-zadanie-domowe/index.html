@@ -12,25 +12,39 @@
 
 <body>
     <div class="header">
-        <h1>Witaj Zadanie Domowe</h1>
+        <h1>Prosty messenger</h1>
     </div>
 
+    <div class="main-section">
 
-    <div class="homework">
-        <h3>Zadanie Formularz do wymiany mysli i wrazen</h3>
-        <form action="#" id="communicatorForm">
-            <label>
-                Message
-                <input type="text" id="msgInput">
-            </label>
-            <label>
-                Author
-                <input type="text" id="authorInput">
-            </label>
-            <button type="submit">Wyslij wiadomosc</button>
-        </form>
-        <button class="resetBtn" id="removeList">Remove list</button>
-        <ul id="communicatorList"></ul>
+        <div class="left-side">
+            <h3 class="left-side-header">Formularz kontaktowy</h3>
+
+            <form action="#" id="communicatorForm" class="form-container">
+                <label class="authorForm">
+                    Nadawca
+                    <input type="text" id="authorInput">
+                </label>
+                <label class="msgForm">
+                    Wiadomosc
+                    <input type="text" id="msgInput">
+                </label>
+                <div class="form-buttons">
+                    <button type="submit" class="sendMsg" id="submitForm">Wyslij wiadomosc</button>
+                </div>
+            </form>
+
+            <div class="form-buttons">
+                <button class="resetBtn" id="removeList">Resetuj czat</button>
+            </div>
+        </div>
+
+
+        <div class="right-side">
+            <h3 class="right-side-header">Czat</h3>
+            <ul id="communicatorList" class="msgList"></ul>
+        </div>
+
     </div>
 
 

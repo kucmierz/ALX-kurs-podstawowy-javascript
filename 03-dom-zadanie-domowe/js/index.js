@@ -21,7 +21,7 @@ const sendMsg = () => {
     const msg = msgInput.value;
     const author = authorInput.value;
 
-    listOfMsgs.innerHTML += `<li><strong>@${author}:</strong> ${msg}</li>`;
+    listOfMsgs.innerHTML += `<li><strong>[${author}] &gt;&gt; </strong> ${msg}</li>`;
     resetForm();
 }
 

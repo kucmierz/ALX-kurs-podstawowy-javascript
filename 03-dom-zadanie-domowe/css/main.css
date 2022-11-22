@@ -1,32 +1,71 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 body {
     font-family: 'Sono', sans-serif;
     font-size: 18px;
+    color: lavenderblush;
+    background: #2C3E50;
 }
 
-form {
+
+.header {
+    background: lightgray;
+    color: #2C3E50;
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.main-section {
+    margin: 40px auto;
+    display: flex;
+}
+
+.left-side {
+    width: 35%;
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-container {
+    display: block;
+}
+
+.right-side {
+    width: 65%;
+}
+
+.authorForm {
+    display: grid;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.header {
+.msgForm {
+    display: grid;
+}
 
-    background: lavenderblush;
+.form-buttons {
+    display: grid;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.sendMsg {
+    width: 100px;
+    height: 20;
+    /* margin: 15px 15px; */
 }
 
 .resetBtn {
-    margin-bottom: 20px;
-}
-
-.homework {
-    border: 1px solid lightgray;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
+    width: 100px;
+    height: 20;
+    background-color: #7E5109;
 }
