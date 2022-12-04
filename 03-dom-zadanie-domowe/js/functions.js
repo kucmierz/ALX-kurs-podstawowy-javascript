@@ -45,6 +45,12 @@ const multiply = () => {
 
 multiply();
 
+//poprawna funkcja mnozenia przedstawiona na zajeciach
+function multiply2(number1, number2) {
+    console.log(`${number1} * ${number2} = ${number1 * number2}`);
+}
+
+
 // 3. Napisz funkcje o nazwie whoIsTaller, ktorej zadanie jest nastepujace:
 // - funkcja ma pobrac wzrost pierwszego uzytkownika
 // - funkcja ma pobrac wzrost drugiego uzytkownika
@@ -64,6 +70,17 @@ const whoIsTaller = () => {
 }
 
 whoIsTaller();
+
+//poprawna funkcja z parametrami przedstawiona na zajeciach
+const whoIsTaller2 = (height_1, height_2) => {
+    if (height_1 > height_2) {
+        console.log('Osoba pierwsza jest wyzsza');
+    } else if (height_1 < height_2) {
+        console.log('Osoba druga jest wyzsza');
+    } else {
+        console.log('Osoby maja ten sam wzrost');
+    }
+}
 
 // 4. Napisz funkcje o nazwie findTheBestMovie, ktora przyjmie jako parametr liste Twoich ulubionych filmow i nastepnie zwroci napis "Moim ulubionym filmem jest Ojciec Chrzestny z ocena 10".
 

@@ -1,0 +1,61 @@
+// Zadanie domowe
+
+// 1. Napisz funkcje findByID, ktora przyjmie 2 parametry - tablice obiektow (kazdy obiekt musi zawierac pole id), oraz id po ktorym ma szukac. Funkcja powinna zwracac obiekt ktory dalo sie znalezc, w przeciwnym wypadku zwrocic null
+
+// const people = [
+//   {
+//     id: 1,
+//     name: "Damian"
+//   },
+//   {
+//     id: 2,
+//     name: "Paweł"
+//   },
+//   {
+//     id: 3,
+//     name: "Agnieszka"
+//   }
+// ]
+
+// findById(people, 3) powinno zwrocic obiekt agnieszka
+// finyById(people, 5) powinno zwrocic null
+
+
+// 2. Poznaj metode dostepna na stringach i tablicach o nazwie includes. Dziala ona tak, ze jesli string lub tablica zawiera dany wyraz, to zwroci true
+
+// 'Damian'.includes('da') -> false (includes patrzy na wielkie/male znaki)
+// 'damian'.includes('da') -> true
+
+// ['damian', 'agnieszka'].includes('damian') -> true
+
+// jak obejsc male i duze znaki? jest metoda .toLowerCase() i .toUpperCase()
+
+// 'Damian'.toLowerCase().includes('da') -> true
+
+
+// Napisz metode filterByName, ktora przyjmie tablice obiektow people oraz tekst a nastepnie zwroci inna tablice obiektow, zawierajaca elementy, ktore udalo sie znalezc. Jesli nie uda znalezc sie nikogo, zwroc pusta tablice.
+
+// const people2 = [
+//   {
+//     id: 1,
+//     name: "Damian"
+//   },
+//   {
+//     id: 2,
+//     name: "Paweł"
+//   },
+//   {
+//     id: 3,
+//     name: "Agnieszka"
+//   }
+// ]
+
+
+// filterByName(people2, 'e') powinno zwrocic tablice obiektow zawierajaca pawla i agnieszke
+// filterByName(people2, 'ag') powinno zwrocic tablice obiekow zawierajaca 1 obiekt - anigeszka
+// filterByName(people2, 'das') powinno zwrocic pusta tablice
+
+
+// 3. Poczytaj o sortowaniu babelkowym za pomoca petli for
+
+// 4. Stworz liste zamowien ksiazek. Po stronie HTML niech to bedzei tabela. Pod tabela umiesc formularz zawierajacy 3 pola input: title, year, author. Nastepnie za pomoca JS zrob obsluge dodawania nowego rekordu do tabeli. Skorzystaj z LS aby odczytac i zapisac dane do pamieci podrecznej
