@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Zadanie 4</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title">Zadanie 4</h2>
+        <p class="homework_text">Stworz liste zamowien ksiazek. Po stronie HTML niech to bedzei tabela. Pod tabela
+            umiesc formularz zawierajacy 3
+            pola input: title, year, author. Nastepnie za pomoca JS zrob obsluge dodawania nowego rekordu do tabeli.
+            Skorzystaj z LS aby odczytac i zapisac dane do pamieci podrecznej</p>
+    </div>
+    <div class="input_form">
+        <p>Wprowadz nowa ksiazke:</p>
+        <form id="book_form">
+            <label for="book_title">Tytul</label>
+            <input type="text" id="book_title">
+            <label for="book_year">Rok</label>
+            <input type="number" min="2000" max="2030" id="book_year">
+            <label for="book_author">Autor</label>
+            <input type="text" id="book_author">
+            <button type="submit">Zapisz</button>
+        </form>
+    </div>
+    <div class="output">
+        <span>Przeczytane ksiazki</span>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tytul</th>
+                    <th>Rok</th>
+                    <th>Autor</th>
+                </tr>
+            </thead>
+            <tbody id="book_table"></tbody>
+        </table>
+
+    </div>
+
+    <div class="footer">
+        <a href="./index.html">Strona glowna</a>
+    </div>
+    <script src="./js/zadanie_04_ksiazki.js"></script>
+</body>
+
+</html>
