@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Order Table</h1>
+
+
+        <h3>Search</h3>
+        <form id="searchForm">
+            <label>
+                Search
+                <input id="searchInput" type="text" placeholder="type something...">
+            </label>
+            <button>Go</button>
+        </form>
+
+        <hr>
+
+        <h3>Add new order</h3>
+        <form id="orderForm">
+            <label>
+                Name
+                <input type="text" id="orderName">
+            </label>
+            <label>
+                Price
+                <input type="text" id="orderPrice">
+            </label>
+            <button type="submit"> Send </button>
+        </form>
+
+        <p id="errorMessage"></p>
+
+        <hr>
+
+        <h3>Order List</h3>
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </thead>
+            <tbody id="orderTableBody"></tbody>
+        </table>
+
+        <hr>
+
+        <h3>Additional Tasks</h3>
+        <p>
+            Suma zamówień <span id="orderSum"></span>
+            <button id="calculateSum">Oblicz sumę</button>
+        </p>
+        <p>
+            Największy element <span id="biggestOrderElement"></span>
+            <button id="calculateBiggestElementButton">Oblicz Najwiekszy element</button>
+        </p>
+        <p>
+            Srednia cena produktu <span id="averagePrice"></span>
+            <button id="calculateAveragePriceButton">Oblicz srednia cene produktu</button>
+        </p>
+
+    </div>
+
+    <script src="./js/prowadzacego.js"></script>
+</body>
+
+</html>

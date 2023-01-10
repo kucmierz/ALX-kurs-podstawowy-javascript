@@ -1,0 +1,5 @@
+Node -v -> sprawdzenie wersji node
+Npm -v -> sprawdzanie wersji nam
+Npm init -> inicjalizacja projektu nam
+Npm install nazwa-paczka -> instalacja paczki
+Npm run nazwa-skryptu -> uruchomienie skryptu z package.json

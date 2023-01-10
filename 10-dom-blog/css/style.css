@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.container {
+    width: 1024px;
+    margin: 40px auto;
+}
+
+.blog {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blogpost {
+    border: 1px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.blogpost img {
+    width: 100%;
+}
+
+.blogpost h2 {
+    margin: 10px 0;
+}
+
+.blogpost a {
+    display: block;
+    margin-top: 5px;
+}
+
+.blogpost-content {
+    padding: 15px;
+}
+
+.filters {
+    margin: 20px 0;
+}
+
+.filters label {
+    margin: 0 10px;
+}

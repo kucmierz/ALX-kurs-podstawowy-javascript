@@ -1,0 +1,13 @@
+.slider {
+    width: 400px;
+    margin: 20px auto;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+}

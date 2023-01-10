@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-dom-order-table</title>
+</head>
+
+<body>
+
+    <div>
+        <h1>Order Table</h1>
+        <hr>
+        <h3>Search</h3>
+        <form id="searchForm">
+            <label>
+                <input id="searchInput" type="text" placeholder="type somethinhg...">
+            </label>
+            <button type="submit">Search</button>
+        </form>
+        <button id="showAllRecords">Show All</button>
+        <hr>
+        <form id="product_form">
+            <label>
+                Name
+                <input id="product_name" type="text">
+            </label>
+            <label>
+                Price
+                <input id="product_price" type="text">
+            </label>
+            <button type="submit"> Send </button>
+        </form>
+
+        <p id="errorMessage"></p>
+
+
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </thead>
+            <tbody id="table_body">
+            </tbody>
+        </table>
+
+        <p>Suma zamowien <span id="orderSum"></span>
+            <button id="btnSum">Oblicz sume</button>
+        </p>
+        <p>Najwiekszy element <span id="biggestOrderElement"></span><button id="btnMaxElem">Oblicz nejwiekszy
+                element</button></p>
+        <p>Srednia cena produktu <span id="averagePrice"></span><button id="btnAvgPrice">Oblicz srednia cene
+                produktu</button></p>
+
+    </div>
+
+    <script src="./js/app_obsluga_tabeli_01.js"></script>
+</body>
+
+</html>
