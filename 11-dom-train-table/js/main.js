@@ -29,7 +29,7 @@ const trainRoutes = [
     }
 ];
 
-let filteredResults = trainRoutes;
+let filteredResults = trainRoutes.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
 
 const results_table = document.querySelector('#results_table');
 
@@ -98,7 +98,7 @@ setDateAndTime();
 
 // wyswietlenie wszystkich zapisanych rekordow
 const showAllRecords = () => {
-    filteredResults = trainRoutes;
+    filteredResults = trainRoutes.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
     showConnections(filteredResults);
 }
 
@@ -133,11 +133,6 @@ const searchConnection = () => {
             matchingConnections.push(train);
         }
 
-        // console.log(icInput.checked);
-        // console.log(Date.parse(dateInput.value) >= Date.parse(train.date));
-        // console.log(timeInput.value >= train.time);
-        // console.log(dateInput.value);
-        // console.log(timeInput.value === '');
     });
     showConnections(matchingConnections);
 }
@@ -145,3 +140,4 @@ const searchConnection = () => {
 // dodawanie zdarzen na stronie
 showAllBtn.addEventListener('click', showAllRecords);
 searchForm.addEventListener('submit', formValidation);
+
