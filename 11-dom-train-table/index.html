@@ -2,39 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Rozklad jazdy pociagow</title>
 </head>
 
 <body>
-    <!-- Napisz aplikacje 'Rozklad jazdy' -->
-    <!-- Aplikacja niech zawiera polaczenia z Warszawy do roznych miast. Zadania aplikacji -->
-    <!-- 1. Polaczenia pociagow, to jest to tablica obiektow
 
-  const trainRoutes = [
-    {
-      from: 'Warsaw',
-      to: 'Poznań',
-      date: '23.12.2023',
-      time: '12:45',
-      intercity: true
-    },
-    {
-      from: 'Szczecin',
-      to: 'Poznań',
-      date: '23.12.2023',
-      time: '12:45',
-      intercity: true
-    }
-  ]
+  <div class="header">
+    <h2 class="header_title">Rozklad jazdy pociagow</h2>
+  </div>
 
-    2. Za pomoca petli forEach, wyswietl na stronie rozklad pociagow (ostyluj zadanie w miare mozliwosci).
-    3. Nad rozkladem jazdy, dodaj wyszukiwarke. Jesli wpisze w wyszukiwarke slowo Warszawa, znajdz wszystkie polaczenia z lub do Warszawy.
-    4. Pod wyszukiwarka stworz checkbox, ktory wyswietli tylko polaczenia intercity.
-    5. Dodaj dynamiczne filtry z datami. Jesli klikniesz w dana date, wyswietla Ci sie polaczenia pociagow z tylko danego dnia.
-  -->
+
+  <div class="main-section container">
+    <div class="left-side">
+      <h2 class="left-side-heading">Szukaj polaczenia</h2>
+
+      <form id="searchForm">
+
+        <label for="">Data<input id="dateInput" type="date"></label>
+        <label for="">Czas<input id="timeInput" type="time"></label>
+        <!-- <label for="">Z<input id="fromInput" type="text"></label>
+      <label for="">Do<input id="toInput" type="text"></label> -->
+        <label for="">Miasto<input id="cityInput" type="text"></label>
+        <label for="">IC<input id="icInput" type="checkbox"></label>
+
+
+        <button type="submit">Szukaj</button>
+
+      </form>
+      <button id="showAllBtn" class="reset_btn">Pokaz wszystko</button>
+
+
+    </div>
+
+
+
+    <div class="right-side">
+
+      <div class="results">
+        <table>
+          <thead>
+            <th class="date_col">Data odjazdu</th>
+            <th class="time_col">Czas odjazdu</th>
+            <th class="from_col">Z</th>
+            <th class="to_col">Do</th>
+            <th class="tarin_col">Typ</th>
+          </thead>
+          <tbody id="results_table"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
