@@ -13,6 +13,7 @@ body {
 }
 
 .header {
+    max-width: 1200px;
     background: #252524;
     display: flex;
     justify-content: center;
