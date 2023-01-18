@@ -29,7 +29,7 @@ const trainRoutes = [
     }
 ];
 
-let filteredResults = trainRoutes.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
+let sortedResults = trainRoutes.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
 
 const results_table = document.querySelector('#results_table');
 
@@ -74,7 +74,7 @@ const showConnections = (connectionList) => {
 }
 
 // loading all records at the beginning 
-showConnections(filteredResults);
+showConnections(sortedResults);
 
 // obsluga wyszukiwania
 const searchForm = document.querySelector('#searchForm');
@@ -98,46 +98,70 @@ setDateAndTime();
 
 // wyswietlenie wszystkich zapisanych rekordow
 const showAllRecords = () => {
-    filteredResults = trainRoutes.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
-    showConnections(filteredResults);
+    sortedResults = trainRoutes.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
+    showConnections(sortedResults);
 }
 
 // walidacja formularza - wlasciwie, to nie jest ona potrzebna, gdyz
 // zawsze mozna po prostu wyswietlic polaczenia ze wzgledu na typ pociagu
 const formValidation = (event) => {
     event.preventDefault();
-    if (cityInput.value !== '' && dateInput.value !== '') {
-        searchConnection();
-    } else {
-        alert('Musisz uzupelniec wszystkie pola');
-    }
-
+    // if (cityInput.value !== '' && dateInput.value !== '') {
+    //     searchConnection();
+    // } else {
+    //     alert('Musisz uzupelniec wszystkie pola');
+    // }
+    searchConnection();
 }
 
 // szukanie polaczenia
 const searchConnection = () => {
-    matchingConnections = [];
+    let matchingConnections = [];
+    let filteredResults = trainRoutes;
+
+    // sprawdzanie IC
     filteredResults.forEach(train => {
-
-        // sprawdzenie, czy zostala wprowadzona miejscowosc
-        if ((train.from === cityInput.value || train.to === cityInput.value)
-            && (Date.parse(dateInput.value) < Date.parse(train.date))
-            && (icInput.checked === train.intercity)
-        ) {
+        if (icInput.checked === train.intercity) {
             matchingConnections.push(train);
         }
-        if ((train.from === cityInput.value || train.to === cityInput.value)
-            && (Date.parse(dateInput.value) === Date.parse(train.date))
-            && (timeInput.value <= train.time)
-            && (icInput.checked === train.intercity)) {
-            matchingConnections.push(train);
-        }
-
     });
-    showConnections(matchingConnections);
+    filteredResults = matchingConnections;
+
+    // sprawdzanie daty i czasu
+    if (dateInput.value !== '' || timeInput.value !== '') {
+        matchingConnections = [];
+        filteredResults.forEach(train => {
+            if (Date.parse(dateInput.value) < Date.parse(train.date)) {
+                matchingConnections.push(train);
+            }
+            //uwzglednienie czasu, kiedy dni sa taki same - aby pokazac tylko pociagi, ktore jeszcze nie odjechaly
+            if (Date.parse(dateInput.value) === Date.parse(train.date)) {
+                if (timeInput.value !== '') {
+                    if (timeInput.value <= train.time) {
+                        matchingConnections.push(train);
+                    }
+                } else {// czas nie zostal wprowadzony, bierzemy wszystkie polaczenia
+                    matchingConnections.push(train);
+                }
+            }
+        });
+        filteredResults = matchingConnections;
+    }
+
+    // sprawdzanie miejscowosci
+    if (cityInput.value !== '') {
+        matchingConnections = [];
+        filteredResults.forEach(train => {
+            if (train.from === cityInput.value || train.to === cityInput.value) {
+                matchingConnections.push(train);
+            }
+        });
+        filteredResults = matchingConnections;
+    }
+
+    showConnections(filteredResults);
 }
 
 // dodawanie zdarzen na stronie
 showAllBtn.addEventListener('click', showAllRecords);
 searchForm.addEventListener('submit', formValidation);
-
