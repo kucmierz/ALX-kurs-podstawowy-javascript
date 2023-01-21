@@ -91,8 +91,11 @@ const showAllBtn = document.querySelector('#showAllBtn');
 const setDateAndTime = () => {
     const fullDate = new Date()//.toLocaleDateString("de-DE");
     dateInput.valueAsDate = fullDate;
-    timeInput.value = `${fullDate.getHours()}:${fullDate.getMinutes()}`;
-    // timeInput.valueAsDate = fullDate;
+    const formattedTime = fullDate.toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+    timeInput.value = formattedTime;
 }
 setDateAndTime();
 
