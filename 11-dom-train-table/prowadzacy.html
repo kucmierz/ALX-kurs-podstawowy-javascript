@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Train timetable</h1>
+        <div>
+            <form id="searchForm">
+                <label>
+                    Query
+                    <input placeholder="Type something..." id="searchInput">
+                </label>
+                <button type="submit">
+                    Search
+                </button>
+            </form>
+        </div>
+        <hr>
+        <div>
+            <form>
+                <label>
+                    Intercity
+                    <input type="checkbox" id="intercityCheckbox">
+                </label>
+            </form>
+        </div>
+        <hr>
+        <h3>Train filters</h3>
+        <div id="trainFilters"></div>
+        <hr>
+        <ul id="trainList">
+        </ul>
+    </div>
+
+    <!-- Napisz aplikacje 'Rozklad jazdy' -->
+    <!-- Aplikacja niech zawiera polaczenia z Warszawy do roznych miast. Zadania aplikacji -->
+    <!-- 1. Polaczenia pociagow, to jest to tablica obiektow
+
+
+    2. Za pomoca petli forEach, wyswietl na stronie rozklad pociagow (ostyluj zadanie w miare mozliwosci).
+    3. Nad rozkladem jazdy, dodaj wyszukiwarke. Jesli wpisze w wyszukiwarke slowo Warszawa, znajdz wszystkie polaczenia z lub do Warszawy.
+    4. Pod wyszukiwarka stworz checkbox, ktory wyswietli tylko polaczenia intercity.
+    5. Dodaj dynamiczne filtry z datami. Jesli klikniesz w dana date, wyswietla Ci sie polaczenia pociagow z tylko danego dnia.
+  -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
