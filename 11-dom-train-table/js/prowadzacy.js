@@ -28,6 +28,11 @@ const trainRoutes = [
     }
 ]
 
+const filterStatus = {
+    query: '',
+    intercity: false,
+    dates: []
+}
 
 const getUniqueElements = (trains) => {
     const dates = [];
@@ -41,58 +46,41 @@ const getUniqueElements = (trains) => {
     return dates;
 }
 
-const renderList = (trains) => {
+const renderList = () => {
     trainList.innerHTML = '';
 
-    trains.forEach((route) => {
-        trainList.innerHTML += `
-      <li>
-        <p>
-          Pociag z <strong> ${route.from} </strong>
-          do <strong> ${route.to} </strong>
-        </p>
-        <p>
-          Odjezdza <span> ${route.time} </span>
-          dnia <span>${route.date}</span>
-        </p>
-        <p>Rodzaj pociagu: ${route.intercity ? 'Intercity' : 'Regio'}</p>
-      </li>
-    `
-    })
+    trainRoutes
+        .filter(route => {
+            // @TODO: Rozbudowac warunek o inne wlasciwosci
+            return route.from.toLowerCase().includes(filterStatus.query)
+                || route.to.toLowerCase().includes(filterStatus.query)
+        })
+        .forEach((route) => {
+            trainList.innerHTML += `
+        <li>
+          <p>
+            Pociag z <strong> ${route.from} </strong>
+            do <strong> ${route.to} </strong>
+          </p>
+          <p>
+            Odjezdza <span> ${route.time} </span>
+            dnia <span>${route.date}</span>
+          </p>
+          <p>Rodzaj pociagu: ${route.intercity ? 'Intercity' : 'Regio'}</p>
+        </li>
+      `
+        })
 }
 
 const handleSearch = (event) => {
     event.preventDefault();
-
-    const filteredResults = [];
-
-    trainRoutes.forEach(route => {
-        if (
-            route.from.toLowerCase().includes(searchInput.value)
-            || route.to.toLowerCase().includes(searchInput.value)
-        ) {
-            filteredResults.push(route);
-        }
-    })
-
-    renderList(filteredResults);
+    filterStatus.query = searchInput.value;
+    renderList();
 }
 
 const handleIntercityChekbox = () => {
-    if (!intercityCheckbox.checked) {
-        renderList(trainRoutes)
-        return;
-    }
-
-    const filteredResults = [];
-
-    trainRoutes.forEach((route) => {
-        if (route.intercity) {
-            filteredResults.push(route)
-        }
-    })
-
-    renderList(filteredResults);
+    filterStatus.intercity = intercityCheckbox.checked;
+    renderList();
 }
 
 const handleFilterChange = (event) => {
@@ -123,14 +111,14 @@ renderList(trainRoutes);
 
 const dates = getUniqueElements(trainRoutes);
 
-dates.forEach(date => {
-    trainFilters.innerHTML += `
-    <label>
-      <input type="checkbox" data-date="${date}">
-      ${date}
-    </label>
-  `
-})
+// dates.forEach(date => {
+//   trainFilters.innerHTML += `
+//     <label>
+//       <input type="checkbox" data-date="${date}">
+//       ${date}
+//     </label>
+//   `
+// })
 
 trainFilters.addEventListener('click', handleFilterChange)
 searchForm.addEventListener('submit', handleSearch)

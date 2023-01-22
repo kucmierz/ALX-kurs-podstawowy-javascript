@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamowienia</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>Zamowienia</h1>
+    <hr>
+    <form id="searchForm">
+        <label>
+            Wyszukaj w zamowieniach
+            <input type="text" id="searchInput">
+        </label>
+        <button type="submit">Wyszukaj</button>
+    </form>
+    <hr>
+    <table class="orders">
+        <thead>
+            <th>Zamowienie</th>
+            <th>Cena</th>
+            <th></th>
+        </thead>
+        <tbody id="orderTable">
+        </tbody>
+    </table>
+
+
+    <form id="orderForm" class="ordersForm">
+        <label>Zamowienie
+            <input type="text" id="orderInput">
+        </label>
+        <label>Cena
+            <input type="text" id="priceInput">
+        </label>
+        <button type="submit">Dodaj</button>
+    </form>
+
+    <button id="sortButton">Sortuj</button>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

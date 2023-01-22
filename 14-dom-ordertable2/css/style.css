@@ -1,0 +1,23 @@
+body {
+    max-width: 1200px;
+}
+
+.orders {
+    width: 50%;
+    float: right;
+}
+
+
+.ordersForm {
+    float: left;
+    display: block;
+}
+
+thead th:nth-child(3) {
+    display: none;
+}
+
+.orders,
+.ordersForm {
+    display: inline-block;
+}

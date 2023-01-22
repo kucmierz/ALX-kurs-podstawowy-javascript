@@ -1,0 +1,12 @@
+  <!-- Napisz Liste zamowien -->
+
+  <!-- 1. Do listy zamowien uzyc tabeli (znaczniki table, thead, tbody, tr, td) -->
+
+  <!-- 2. Pod tabela Dodaj formularz, ktory bedzie mogl dodawac nowe zamowienie.  -->
+
+  <!-- 3. Kazde zamowienie niech posiada 2 pola: nazwa i cena. -->
+
+  <!-- 4. Pod lista zamowien, stworz przycisk o nazwie "sortuj", ktory posortuje zamowienia od najtanszego do najdrozszego -->
+
+  <!-- 5. Zrob obsluge usuwania zamowien (przy kazdym elemencie, dodaj ikonke X, ktora po kliknieciu usunie element ) -->
+
