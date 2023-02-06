@@ -1,0 +1,62 @@
+body {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.form-container {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+form label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+form input[type="text"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+form button[type="submit"] {
+  color: #fff;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.chat-container {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+li {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  list-style: none;
+}
+
+li strong {
+  color: #333;
+  font-weight: bold;
+}
+
+li span.remove-me {
+  color: red;
+  cursor: pointer;
+  float: right;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=index_firebase.0928ca0e.css.map */

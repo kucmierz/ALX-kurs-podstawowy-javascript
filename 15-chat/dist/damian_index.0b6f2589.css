@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 640px;
+  margin: 40px auto;
+}
+
+.form {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.form button {
+  bacground: #eee;
+  cursor: pointer;
+  padding: 6px 14px;
+}
+
+.list {
+  max-height: 500px;
+  list-style: none;
+  position: relative;
+  overflow: scroll;
+}
+
+.list p {
+  margin-top: 15px;
+}
+
+.list .message {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.list .delete-button, .list .like-it-button {
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  box-shadow: none;
+  color: #fff;
+  background: #dc143c;
+  border: 0;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+
+.list .like-it-button {
+  width: 60px;
+  background: #6495ed;
+  font-size: 12px;
+  right: 60px;
+}
+
+.list span {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.list .show-comments {
+  color: #000;
+  margin-top: 10px;
+  font-size: 10px;
+  display: inline-block;
+}
+
+.list .comments {
+  margin: 10px;
+  font-size: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.comment-form {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.comment-form button {
+  margin-left: 10px;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=damian_index.0b6f2589.css.map */

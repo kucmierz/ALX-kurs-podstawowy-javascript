@@ -1,0 +1,7 @@
+<!-- Napisz HTML i JS do obsługi chatu. -->
+  <!-- 1. Na stronie index.html stworz formularz, zawierajacy 2 pola: author i message -->
+  <!-- 2. Zrob walidacje, ze pole author nie moze byc puste, a message nie moze byc krotsze niz 3 znaki -->
+  <!-- 3. Zrob obsluge dodawania wiadomosci do chatu -->
+  <!-- 4. Przy kazdej wiadomosci (elemencie listy), dodaj krzyzyk X, ktory po wcisnieciu usunie dana wiadomosc -->
+  <!-- 5. Dane odczytuj i zapisuj z LS, czyli po odswiezeniu strony, stworzone wiadomosci powinny sie wyswietlic na ekranie -->
+  <!-- 6. Dopisz Jakis CSS, zeby ten chat wygladal ladnie -->

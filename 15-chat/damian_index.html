@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/damian_style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form class="form" id="messageForm">
+            <label>
+                Author
+                <input id="messageAuthor" />
+            </label>
+            <label>
+                Message
+                <input id="messageText" />
+            </label>
+            <button>Send</button>
+        </form>
+        <div>Sort by likes
+            <input type="checkbox" name="Sortuj po likach" id="sortByLikes">
+        </div><br />
+        <form class="form" id="searchForm">
+            <label>
+                <input type="text" id="searchedPhrase">
+                <button>Search</button>
+            </label>
+        </form>
+        <ul class="list" id="messagesList"></ul>
+    </div>
+
+    <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBb0vHu6S5OkKRpkxSwcHy45TkeQDsvm_w",
+            authDomain: "javascript-chat-marek.firebaseapp.com",
+            projectId: "javascript-chat-marek",
+            storageBucket: "javascript-chat-marek.appspot.com",
+            messagingSenderId: "651353146449",
+            appId: "1:651353146449:web:879428080835073cfb6470",
+            databaseURL: 'https://javascript-chat-marek-default-rtdb.europe-west1.firebasedatabase.app/'
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Odczytywanie w const firebase
+        const messageRef = ref(database, 'messages');//w naszej db glowny elem to 'messages'
+        // onValue(messageRef,(data)=>{})
+        const handleData = (data) => {
+            // toJSON() jest to metoda firebase, ktora sluzy do zmiany przychodzacych danych na format javascriptowy
+            const messages = data.toJSON();
+            // console.log(messages);
+            // console.log(Object.values(messages));
+            // zapis wiadomosci do LS - a nasz plik odczyta
+            localStorage.setItem('messages', JSON.stringify(Object.values(messages)))
+        }
+        onValue(messageRef, handleData);
+
+        // jesli nie korzystamy z parcela, potrzebujemy zapisac rzeczy pochodzace z firebase
+        // do window, poniewaz kazdy plik js ma do tego obiektu dostep
+        // window.database = database;
+        // window.messageRef = messageRef;
+        // window.onValue = onValue;
+
+
+    </script> -->
+
+    <script src="./js/damian_main.js" type="module"></script>
+    <!-- Napisz HTML i JS do obsługi chatu. -->
+    <!-- 1. Na stronie index.html stworz formularz, zawierajacy 2 pola: author i message -->
+    <!-- 2. Zrob walidacje, ze pole author nie moze byc puste, a message nie moze byc krotsze niz 3 znaki -->
+    <!-- 3. Zrob obsluge dodawania wiadomosci do chatu -->
+    <!-- 4. Przy kazdej wiadomosci (elemencie listy), dodaj krzyzyk X, ktory po wcisnieciu usunie dana wiadomosc -->
+    <!-- 5. Dane odczytuj i zapisuj z LS, czyli po odswiezeniu strony, stworzone wiadomosci powinny sie wyswietlic na ekranie -->
+    <!-- 6. Dopisz Jakis CSS, zeby ten chat wygladal ladnie -->
+</body>
+
+</html>

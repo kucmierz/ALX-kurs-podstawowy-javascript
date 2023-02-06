@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.container {
+  width: 640px;
+  margin: 40px auto;
+}
+
+.form {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.form button {
+  padding: 6px 14px;
+  bacground: #eee;
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  max-height: 500px;
+  overflow: scroll;
+  position: relative;
+}
+
+.list p {
+  margin-top: 15px;
+}
+
+.list .message {
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.list .delete-button,
+.list .like-it-button {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  background: crimson;
+  box-shadow: none;
+  border: 0;
+  color: #fff;
+}
+
+.list .like-it-button {
+  right: 60px;
+  background: #6495ed;
+  width: 60px;
+  font-size: 12px;
+}
+
+.list span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+}
+
+.list .show-comments {
+  font-size: 10px;
+  display: inline-block;
+  margin-top: 10px;
+  color: #000;
+}
+
+.list .comments {
+  margin: 10px;
+  font-size: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.comment-form {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.comment-form button {
+  font-size: 12px;
+  padding: 4px 8px;
+  margin-left: 10px;
+}
